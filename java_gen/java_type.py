@@ -943,6 +943,8 @@ exceptions = {
         'of_oxm_tun_gpe_flags' : { 'value' : u8obj },
         'of_oxm_tun_gpe_flags_masked' : { 'value' : u8obj, 'value_mask' : u8obj },
 
+        'of_oxm_ofdpa_vrf' : { 'value': u16obj },
+
         'of_oxm_ofdpa_mpls_type' : { 'value': u16obj },
 
         'of_oxm_ofdpa_qos_index': { 'value': u8obj },

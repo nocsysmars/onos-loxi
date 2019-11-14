@@ -52,3 +52,10 @@ struct of_oxm_ofdpa_allow_vlan_translation : of_oxm {
     uint8_t value;
 };
 
+// This struct defines the VRF
+struct of_oxm_ofdpa_vrf : of_oxm {
+    uint32_t type_len == 0xFFFF0206;
+    uint32_t experimenter_id == 0x1018;
+    uint16_t value;
+};
+
