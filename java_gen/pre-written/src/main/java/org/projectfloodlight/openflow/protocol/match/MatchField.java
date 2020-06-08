@@ -93,7 +93,7 @@ public class MatchField<F extends OFValueType<F>> {
 
     public final static MatchField<IPv4Address> IPV4_DST =
             new MatchField<IPv4Address>("ipv4_dst", MatchFields.IPV4_DST,
-                    new Prerequisite<EthType>(MatchField.ETH_TYPE, EthType.IPv4));
+                    new Prerequisite<EthType>(MatchField.ETH_TYPE, EthType.IPv4, EthType.ARP));
     
     public final static MatchField<U32> CONNTRACK_STATE =
             new MatchField<U32>("ct_state", MatchFields.CONNTRACK_STATE);
