@@ -66,3 +66,8 @@ struct of_oxm_ipv6_exthdr_masked : of_oxm {
     uint16_t value;
     uint16_t value_mask;
 };
+
+struct of_oxm_oam_session : of_oxm {
+    uint32_t type_len == 0x00017204;
+    uint32_t value;
+};

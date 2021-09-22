@@ -727,6 +727,9 @@ exceptions = {
         'of_oxm_packet_type' : { 'value' : packet_type },
         'of_oxm_packet_type_masked' : { 'value' : packet_type, 'value_mask' : packet_type },
 
+        'of_oxm_oam_session' : { 'value' : u32obj },
+        'of_oxm_oam_session_masked' : { 'value' : u32obj, 'value_mask' : u32obj },
+
         'of_oxs_byte_count' : { 'value' : u64 },
         'of_oxs_duration' : { 'value' : u64 },
         'of_oxs_flow_count' : { 'value' : u32obj },

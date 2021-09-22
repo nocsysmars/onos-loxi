@@ -225,6 +225,9 @@ public class MatchField<F extends OFValueType<F>> {
     public final static MatchField<OFPort> ACTSET_OUTPUT =
             new MatchField<OFPort>("actset_output", MatchFields.ACTSET_OUTPUT);
 
+    public final static MatchField<U32> OAM_SESSION =
+            new MatchField<U32>("oam_session", MatchFields.OAM_SESSION);
+
     public final static MatchField<IPv4Address> TUNNEL_IPV4_SRC =
             new MatchField<IPv4Address>("tunnel_ipv4_src", MatchFields.TUNNEL_IPV4_SRC,
                     new Prerequisite<EthType>(MatchField.ETH_TYPE, EthType.IPv4));

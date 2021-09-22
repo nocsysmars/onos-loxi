@@ -51,6 +51,7 @@ public enum MatchFields {
     TCP_FLAGS,
     OVS_TCP_FLAGS,
     ACTSET_OUTPUT,
+    OAM_SESSION,
     TUNNEL_IPV4_SRC,
     TUNNEL_IPV4_DST,
     TUNNEL_IPV6_SRC,
