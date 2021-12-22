@@ -54,8 +54,10 @@ make
 To generate the library for a single language:
 
 ```
-make c
+make java
+make package-java
 ```
+NOTE: Please modify the java_gen/pre-written/pom.xml file in <version> field with commit short to track it.
 
 The currently supported languages are `c`, `python` and `java`. There is an
 experimental backend that generates a lua wireshark dissector
@@ -67,6 +69,7 @@ changed with the `LOXI_OUTPUT_DIR` environment variable when using the Makefile.
 Each generated library comes with its own set of documentation in the standard
 format for that language. Please see that documentation for more details on
 using the generated libraries.
+
 
 Contributing
 ============
