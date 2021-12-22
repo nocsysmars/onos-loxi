@@ -32,6 +32,7 @@ public class OFPort implements OFValueType<OFPort> {
     private static final int OFPP_TABLE_INT = 0xFFffFFf9;
     private static final int OFPP_MAX_INT = 0xFFffFF00;
     private static final int OFPP_IN_PORT_INT = 0xFFffFFf8;
+    private static final int OFPP_CENTEC_OAM_INT = 0xFFffFFef;
 
     // private short constants (OF1.0) to avoid duplication in the code
     // should not have to use these outside this class
@@ -287,7 +288,7 @@ public class OFPort implements OFValueType<OFPort> {
                 // -256).
                 // Any unsigned integer value > OFPP_MAX_INT will be ]-256:0[
                 // when read signed
-                if (portNumber < 0 && portNumber > OFPP_MAX_INT)
+                if ((portNumber < 0 && portNumber > OFPP_MAX_INT) && (OFPP_CENTEC_OAM_INT != portNumber))
                     throw new IllegalArgumentException("Unknown special port number: "
                             + portNumber);
                 return new OFPort(portNumber);
@@ -436,7 +437,7 @@ public class OFPort implements OFValueType<OFPort> {
                 // -256).
                 // Any unsigned integer value > OFPP_MAX_SHORT will be ]-256:0[
                 // when read signed
-                if (portNumber < 0 && portNumber > OFPP_MAX_SHORT)
+                if ((portNumber < 0 && portNumber > OFPP_MAX_SHORT) && (OFPP_CENTEC_OAM_INT != portNumber))
                     throw new IllegalArgumentException("Unknown special port number: "
                             + portNumber);
                 return new OFPort(U16.f(portNumber));
